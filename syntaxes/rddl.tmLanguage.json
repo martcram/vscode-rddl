@@ -1,29 +1,35 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "RDDL",
+	"fileTypes": [
+		"rddl", "rddl2"
+	  ],
 	"patterns": [
 		{
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#comments"
 		}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.rddl",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.rddl",
-			"begin": "\"",
-			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.rddl",
-					"match": "\\\\."
+					"name": "keyword.control.rddl",
+					"match": "\\b(if|then|else|else if|while|for|return)\\b"
+				},
+				{
+					"name": "keyword.operator.rddl",
+					"match": "[|^~]"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.rddl",
+					"match": "\/\/.*"
 				}
 			]
 		}
