@@ -1,0 +1,25 @@
+{
+    "name": "vscode-rddl",
+    "displayName": "RDDL Language Support",
+    "description": "Language support for the Relational Dynamic Influence Diagram Language (RDDL)",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "rddl",
+            "aliases": ["RDDL", "rddl"],
+            "extensions": [".rddl",".rddl2"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rddl",
+            "scopeName": "source.rddl",
+            "path": "./syntaxes/rddl.tmLanguage.json"
+        }]
+    }
+}
