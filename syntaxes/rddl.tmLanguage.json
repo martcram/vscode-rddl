@@ -79,7 +79,11 @@
 				{
                     "match": ":",
                     "name": "punctuation.separator.colon.rddl"
-                }
+				},
+				{
+                    "match": "\\?\\w*",
+                    "name": "punctuation.definition.variable.rddl"
+				}
             ]
 		},
 		"storage": {
