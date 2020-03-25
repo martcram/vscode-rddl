@@ -56,6 +56,10 @@
                     "name": "keyword.operator.rddl"
 				},
 				{
+                    "match": "exp",
+                    "name": "keyword.operator.rddl"
+				},
+				{
                     "match": "-(?=\\d)",
                     "name": "keyword.operator.rddl"
 				},
@@ -150,6 +154,10 @@
 				{
 					"match": "\\b((0(x|X)[0-9a-fA-F]([0-9a-fA-F']*[0-9a-fA-F])?)|(0(b|B)[01]([01']*[01])?)|(([0-9]([0-9']*[0-9])?\\.?[0-9]*([0-9']*[0-9])?)|(\\.[0-9]([0-9']*[0-9])?))((e|E)(\\+|-)?[0-9]([0-9']*[0-9])?)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b",
 					"name": "constant.numeric.rddl"
+				},
+				{
+					"match": "\\b[A-Z_]{2,}\\b",
+					"name": "constant.other.caps.rddl"
 				}
 			]
 		}
