@@ -12,60 +12,57 @@
 			"include": "#punctuation"
 		},
 		{
+			"include": "#storage"
+		},
+		{
 			"include": "#comment"
 		},
 		{
 			"include": "#constant"
-		},
-		{
-			"include": "#storage"
-		},
-		{
-			"include": "#meta"
 		}
 	],
 	"repository": {
 		"keyword": {
 			"patterns": [
 				{
-					"name": "keyword.control.rddl",
-					"match": "\\b(if|then|else|else if|while|for|switch)\\b"
+					"match": "\\b(if|then|else|else if|while|for|switch)\\b",
+					"name": "keyword.control.rddl"
 				},
 				{
                     "match": "\\s(\\^|\\||=>|<=>)\\s",
-                    "name": "keyword.operator.logical.c"
+                    "name": "keyword.operator.logical.rddl"
 				},
 				{
                     "match": "\\~(?=[a-zA-Z])",
-                    "name": "keyword.operator.logical.c"
+                    "name": "keyword.operator.logical.rddl"
 				},
 				{
                     "match": "\\b(forall_|exists_)(?={)",
-                    "name": "keyword.operator.logical.c"
+                    "name": "keyword.operator.logical.rddl"
                 },
 				{
                     "match": "\\s(~=|<=|>=|==|<|>)\\s",
-                    "name": "keyword.operator.comparison.c"
+                    "name": "keyword.operator.comparison.rddl"
 				},
 				{
                     "match": "\\s=\\s",
-                    "name": "keyword.operator.assignment.c"
+                    "name": "keyword.operator.assignment.rddl"
 				},
 				{
                     "match": "\\s(\\*|-|\\+)\\s",
-                    "name": "keyword.operator.c"
+                    "name": "keyword.operator.rddl"
 				},
 				{
                     "match": "-(?=\\d)",
-                    "name": "keyword.operator.c"
+                    "name": "keyword.operator.rddl"
 				},
 				{
                     "match": "\\s(?<!\/)\/(?!\/)\\s",
-                    "name": "keyword.operator.c"
+                    "name": "keyword.operator.rddl"
 				},
 				{
                     "match": "\\b(sum_|prod_)(?={)",
-                    "name": "keyword.operator.c"
+                    "name": "keyword.operator.rddl"
 				}
 			]
 		},
@@ -73,35 +70,43 @@
             "patterns": [
                 {
                     "match": ";",
-					"name": "punctuation.terminator.statement.c"
+					"name": "punctuation.terminator.statement.rddl"
                 },
                 {
                     "match": ",",
-                    "name": "punctuation.separator.delimiter.c"
+                    "name": "punctuation.separator.delimiter.rddl"
 				},
 				{
                     "match": ":",
-                    "name": "punctuation.separator.colon.c"
+                    "name": "punctuation.separator.colon.rddl"
                 }
             ]
-        },
+		},
+		"storage": {
+            "patterns": [
+                {
+                    "match": "\\b(int|real|bool)\\b",
+					"name": "storage.type.rddl"
+                }
+            ]
+		},
 		"comment": {
 			"patterns": [
 				{
-					"name": "comment.line.double-slash.rddl",
-					"match": "(\/\/.*)"
+					"match": "(\/\/.*)",
+					"name": "comment.line.double-slash.rddl"
 				}
 			]
 		},
 		"constant": {
 			"patterns": [
 				{
-					"name": "constant.language.rddl",
-					"match": "\\b(true|false)\\b"
+					"match": "\\b(true|false)\\b",
+					"name": "constant.language.rddl"
 				},
 				{
-					"name": "constant.numeric.rddl",
-					"match": "\\b((0(x|X)[0-9a-fA-F]([0-9a-fA-F']*[0-9a-fA-F])?)|(0(b|B)[01]([01']*[01])?)|(([0-9]([0-9']*[0-9])?\\.?[0-9]*([0-9']*[0-9])?)|(\\.[0-9]([0-9']*[0-9])?))((e|E)(\\+|-)?[0-9]([0-9']*[0-9])?)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b"
+					"match": "\\b((0(x|X)[0-9a-fA-F]([0-9a-fA-F']*[0-9a-fA-F])?)|(0(b|B)[01]([01']*[01])?)|(([0-9]([0-9']*[0-9])?\\.?[0-9]*([0-9']*[0-9])?)|(\\.[0-9]([0-9']*[0-9])?))((e|E)(\\+|-)?[0-9]([0-9']*[0-9])?)?)(L|l|UL|ul|u|U|F|f|ll|LL|ull|ULL)?\\b",
+					"name": "constant.numeric.rddl"
 				}
 			]
 		}
