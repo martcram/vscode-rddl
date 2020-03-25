@@ -15,6 +15,9 @@
 			"include": "#storage"
 		},
 		{
+			"include": "#entity"
+		},
+		{
 			"include": "#comment"
 		},
 		{
@@ -25,7 +28,7 @@
 		"keyword": {
 			"patterns": [
 				{
-					"match": "\\b(if|then|else|else if|while|for|switch)\\b",
+					"match": "\\b(if|then|else|else if|while|for|switch|default)\\b",
 					"name": "keyword.control.rddl"
 				},
 				{
@@ -89,8 +92,12 @@
 		"storage": {
             "patterns": [
                 {
-                    "match": "\\b(int|real|bool)\\b",
+                    "match": "\\b(int|real|bool|object)\\b",
 					"name": "storage.type.rddl"
+				},
+				{
+                    "match": "\\b(state-fluent|non-fluent|action-fluent|interm-fluent|observ-fluent)\\b",
+					"name": "storage.type.fluent.rddl"
 				},
 				{
                     "match": "^(domain|non-fluents|instance)(?=\\s+[a-zA-Z])",
@@ -109,6 +116,22 @@
 					"name": "storage.type.struct.rddl"
 				}
             ]
+		},
+		"entity": {
+			"patterns": [
+				{
+					"match": "\\b(KronDelta|DiracDelta|Bernoulli|Discrete|Normal|Poisson)(?=\\s*)",
+					"name": "entity.name.function.probdist.rddl"
+				},
+				{
+                    "match": "(?!(for|if|switch|while|else if))(?>[a-zA-Z_][-a-zA-Z_]*(\\w+))(?=\\()",
+                    "name": "entity.name.function.rddl"
+                },
+				{
+                    "match": "(?!(for|if|switch|while|else if))(?>[a-zA-Z_][-a-zA-Z_]*(\\w+)')(?=\\()",
+                    "name": "entity.name.function.time.rddl"
+                }
+			]
 		},
 		"comment": {
 			"patterns": [
