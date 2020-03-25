@@ -87,7 +87,23 @@
                 {
                     "match": "\\b(int|real|bool)\\b",
 					"name": "storage.type.rddl"
-                }
+				},
+				{
+                    "match": "^(domain|non-fluents|instance)(?=\\s+[a-zA-Z])",
+					"name": "storage.type.class.rddl"
+				},
+				{
+                    "match": "\\b(types|pvariables|cpfs|cdfs|state-action-constraints|reward|non-fluents|objects|init-state|action-preconditions)(?=\\s*{)",
+					"name": "storage.type.struct.rddl"
+				},
+				{
+                    "match": "\\b(requirements)(?=\\s*=\\s*{)",
+					"name": "storage.type.struct.rddl"
+				},
+				{
+                    "match": "\\b(reward)(?=\\s*=)",
+					"name": "storage.type.struct.rddl"
+				}
             ]
 		},
 		"comment": {
