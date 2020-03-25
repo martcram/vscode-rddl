@@ -29,7 +29,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.rddl",
-					"match": "\\b(if|then|else|else if|while|for|return|switch)\\b"
+					"match": "\\b(if|then|else|else if|while|for|switch)\\b"
 				},
 				{
                     "match": "\\s(\\^|\\||=>|<=>)\\s",
