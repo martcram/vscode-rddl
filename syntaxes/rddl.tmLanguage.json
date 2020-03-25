@@ -18,6 +18,9 @@
 			"include": "#entity"
 		},
 		{
+			"include": "#variable"
+		},
+		{
 			"include": "#comment"
 		},
 		{
@@ -90,6 +93,10 @@
 				{
                     "match": "\\?\\w*",
                     "name": "punctuation.definition.variable.rddl"
+				},
+				{
+                    "match": "\\@\\w*",
+                    "name": "punctuation.definition.variable.rddl"
 				}
             ]
 		},
@@ -108,15 +115,7 @@
 					"name": "storage.type.class.rddl"
 				},
 				{
-                    "match": "\\b(types|pvariables|cpfs|cdfs|state-action-constraints|reward|non-fluents|objects|init-state|action-preconditions)(?=\\s*{)",
-					"name": "storage.type.struct.rddl"
-				},
-				{
-                    "match": "\\b(requirements)(?=\\s*=\\s*{)",
-					"name": "storage.type.struct.rddl"
-				},
-				{
-                    "match": "\\b(reward)(?=\\s*=)",
+                    "match": "\\b(types|pvariables|cpfs|cdfs|state-action-constraints|non-fluents|objects|init-state|action-preconditions)(?=\\s*{)",
 					"name": "storage.type.struct.rddl"
 				}
             ]
@@ -135,6 +134,14 @@
                     "match": "(?!(for|if|switch|while|else if))(?>[a-zA-Z_][-a-zA-Z_]*(\\w+)')(?=\\()",
                     "name": "entity.name.function.time.rddl"
                 }
+			]
+		},
+		"variable": {
+			"patterns": [
+				{
+					"match": "\\b(domain|non-fluents|max-nondef-actions|horizon|discount|reward|requirements)(?=\\s*=)",
+					"name": "variable.language.rddl"
+				}
 			]
 		},
 		"comment": {
