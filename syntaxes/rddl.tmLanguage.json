@@ -29,8 +29,40 @@
 					"match": "\\b(if|then|else|else if|while|for|return|switch)\\b"
 				},
 				{
-					"name": "keyword.operator.rddl",
-					"match": "(\\bforall_|\\bexists_|\\^|\\~|\\||\\bsum_|\\bprod_)"
+                    "match": "\\s(\\^|\\||=>|<=>)\\s",
+                    "name": "keyword.operator.logical.c"
+				},
+				{
+                    "match": "\\~(?=[a-zA-Z])",
+                    "name": "keyword.operator.logical.c"
+				},
+				{
+                    "match": "\\b(forall_|exists_)(?={)",
+                    "name": "keyword.operator.logical.c"
+                },
+				{
+                    "match": "\\s(~=|<=|>=|==|<|>)\\s",
+                    "name": "keyword.operator.comparison.c"
+				},
+				{
+                    "match": "\\s=\\s",
+                    "name": "keyword.operator.assignment.c"
+				},
+				{
+                    "match": "\\s(\\*|-|\\+)\\s",
+                    "name": "keyword.operator.c"
+				},
+				{
+                    "match": "-(?=\\d)",
+                    "name": "keyword.operator.c"
+				},
+				{
+                    "match": "\\s(?<!\/)\/(?!\/)\\s",
+                    "name": "keyword.operator.c"
+				},
+				{
+                    "match": "\\b(sum_|prod_)(?={)",
+                    "name": "keyword.operator.c"
 				}
 			]
 		},
@@ -38,7 +70,7 @@
 			"patterns": [
 				{
 					"name": "comment.line.double-slash.rddl",
-					"match": "\/\/.*"
+					"match": "(\/\/.*)"
 				}
 			]
 		},
