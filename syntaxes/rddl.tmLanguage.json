@@ -78,6 +78,10 @@
                 {
                     "match": ",",
                     "name": "punctuation.separator.delimiter.c"
+				},
+				{
+                    "match": ":",
+                    "name": "punctuation.separator.colon.c"
                 }
             ]
         },
