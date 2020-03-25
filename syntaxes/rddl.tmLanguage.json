@@ -9,6 +9,9 @@
 			"include": "#keyword"
 		},
 		{
+			"include": "#punctuation"
+		},
+		{
 			"include": "#comment"
 		},
 		{
@@ -66,6 +69,18 @@
 				}
 			]
 		},
+		"punctuation": {
+            "patterns": [
+                {
+                    "match": ";",
+					"name": "punctuation.terminator.statement.c"
+                },
+                {
+                    "match": ",",
+                    "name": "punctuation.separator.delimiter.c"
+                }
+            ]
+        },
 		"comment": {
 			"patterns": [
 				{
