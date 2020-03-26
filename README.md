@@ -25,7 +25,7 @@ These instructions will get you a copy of this project up and running on your lo
 * [New Moon](https://taniarascia.github.io/new-moon/) (color theme)
 
 ### Authors:
-See the list of [contributors](https://github.com/MartijnCramer/discord_delete_msgs/contributors) who participated in this project.
+See the list of [contributors](https://github.com/MartijnCramer/vscode-rddl/contributors) who participated in this project.
 
 ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
