@@ -1,65 +1,31 @@
-# vscode-rddl README
+## RDDL syntax highlighting for VS Code
 
-This is the README for your extension "vscode-rddl". After writing up a brief description, we recommend including the following sections.
+Syntax highlighting for the [Relational Dynamic Influence Diagram Language](https://github.com/ssanner/rddlsim) (RDDL) in Visual Studio Code.
 
-## Features
+![Syntax highlighting screenshot](images/rddl_syntax.png)
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Getting started
+These instructions will get you a copy of this project up and running on your local machine for usage, development or testing purposes.
 
-For example if there is an image subfolder under your extension project workspace:
+1) Clone the repository or download and extract the ZIP files:  
+  ```
+  git clone <SSH or HTTPS>
+  ```
+2) Move the cloned repository under the .vscode folder of your system's home directory (Linux):
+  ```
+  mv vscode-rddl/ ~/.vscode/extensions/  
+  ```
+3) Launch VS Code or reload your current window for these changes to take effect.
 
-\!\[feature X\]\(images/feature-x.png\)
+4) Finally, select RDDL in the bottom right corner of VS Code's status bar and you are ready to go!
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+### Tested with:
+* Ubuntu 18.04
+* VS Code 1.43.2
+* [New Moon](https://taniarascia.github.io/new-moon/) (color theme)
 
-## Requirements
+### Authors:
+See the list of [contributors](https://github.com/MartijnCramer/discord_delete_msgs/contributors) who participated in this project.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+### License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
