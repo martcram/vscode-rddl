@@ -29,3 +29,7 @@ See the list of [contributors](https://github.com/MartijnCramer/vscode-rddl/cont
 
 ### License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more details.
+
+### Acknowledgments
+* [KU Leuven](https://iiw.kuleuven.be/english/diepenbeek) @ Diepenbeek Campus
+* Automation, Computer vision and Robotics ([ACRO](https://iiw.kuleuven.be/onderzoek/acro)) research unit
