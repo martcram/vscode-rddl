@@ -31,7 +31,7 @@
 		"keyword": {
 			"patterns": [
 				{
-					"match": "\\b(if|then|else|else if|while|for|switch|default)\\b",
+					"match": "\\b(if|then|else|else if|while|for|switch|default|level)\\b",
 					"name": "keyword.control.rddl"
 				},
 				{
